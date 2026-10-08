@@ -466,7 +466,7 @@ header{
 </main>
 
 <!-- ADD/EDIT MODAL -->
-<div class="modal-backdrop" id="add-modal" onclick="e=>e.target===this&&closeModal()">
+<div class="modal-backdrop" id="add-modal" onclick="if(event.target===this)closeModal()">
   <div class="modal" onclick="event.stopPropagation()">
     <div class="modal-header">
       <div class="modal-title" id="modal-title-text">New Project</div>
