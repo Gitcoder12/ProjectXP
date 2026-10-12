@@ -42,7 +42,6 @@ body{
   font-size:15px; line-height:1.6;
 }
 
-/* Scanline effect */
 body::before{
   content:''; position:fixed; inset:0; pointer-events:none; z-index:9999;
   background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.03) 2px,rgba(0,0,0,0.03) 4px);
@@ -52,7 +51,6 @@ body::before{
 ::-webkit-scrollbar-track{background:var(--bg2)}
 ::-webkit-scrollbar-thumb{background:var(--green);border-radius:2px}
 
-/* ── HEADER ── */
 header{
   display:flex; align-items:center; justify-content:space-between;
   padding:1.25rem 2rem;
@@ -89,7 +87,6 @@ header{
 .btn-danger:hover{background:rgba(255,51,85,0.1)}
 .btn-sm{padding:0.3rem 0.7rem;font-size:0.65rem}
 
-/* ── STATS BAR ── */
 .stats-bar{
   display:grid; grid-template-columns:repeat(5,1fr);
   gap:0; border-bottom:1px solid var(--border);
@@ -111,10 +108,8 @@ header{
 .stat-value span{font-size:0.75rem;font-weight:400;color:var(--text2);margin-left:2px}
 .stat-sub{font-size:0.72rem;color:var(--text3);margin-top:0.2rem;font-family:var(--mono)}
 
-/* ── MAIN LAYOUT ── */
 .main{max-width:1400px;margin:0 auto;padding:1.5rem 2rem}
 
-/* ── TOOLBAR ── */
 .toolbar{
   display:flex; align-items:center; gap:0.75rem;
   margin-bottom:1.5rem; flex-wrap:wrap;
@@ -162,7 +157,6 @@ header{
 .vbtn:last-child{border-radius:0 var(--radius) var(--radius) 0}
 .vbtn.on,.vbtn:hover{background:var(--border2);color:var(--green)}
 
-/* ── PROJECT GRID ── */
 #projects-container.grid-view{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
@@ -172,7 +166,6 @@ header{
   display:flex; flex-direction:column; gap:0.6rem;
 }
 
-/* ── PROJECT CARD ── */
 .project-card{
   background:var(--surface); border:1px solid var(--border);
   border-radius:var(--radius); padding:1.25rem;
@@ -187,7 +180,6 @@ header{
 }
 .project-card:hover{border-color:var(--border2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,0.4)}
 
-/* List view card */
 #projects-container.list-view .project-card{
   display:grid;
   grid-template-columns:1fr auto;
@@ -208,7 +200,6 @@ header{
 .card-actions{display:flex;gap:0.4rem;opacity:0;transition:opacity var(--transition)}
 .project-card:hover .card-actions{opacity:1}
 
-/* Status badge */
 .status-badge{
   display:inline-flex; align-items:center; gap:0.3rem;
   padding:3px 8px; border-radius:4px;
@@ -221,7 +212,6 @@ header{
 .s-complete{background:rgba(68,136,255,0.12);color:var(--blue);border:1px solid rgba(68,136,255,0.25)}
 .s-broken{background:rgba(255,51,85,0.12);color:var(--red);border:1px solid rgba(255,51,85,0.25)}
 
-/* Progress */
 .progress-section{margin-bottom:0.85rem}
 .progress-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.35rem}
 .progress-label{font-family:var(--mono);font-size:0.62rem;color:var(--text3);letter-spacing:1px}
@@ -234,7 +224,6 @@ header{
   box-shadow:0 0 8px var(--card-color,var(--green));
 }
 
-/* Features */
 .features-wrap{display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.85rem}
 .feature-tag{
   display:inline-flex; align-items:center; gap:0.25rem;
@@ -247,7 +236,6 @@ header{
 .feature-tag.wip{color:var(--yellow);border-color:rgba(255,214,10,0.3);background:rgba(255,214,10,0.06)}
 .feature-tag.todo{color:var(--text3)}
 
-/* Card bottom */
 .card-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border)}
 .card-tech{display:flex;gap:0.35rem;flex-wrap:wrap}
 .tech-pill{
@@ -257,7 +245,6 @@ header{
 }
 .card-date{font-family:var(--mono);font-size:0.6rem;color:var(--text3)}
 
-/* ── MODAL ── */
 .modal-backdrop{
   position:fixed; inset:0; background:rgba(0,0,0,0.85);
   z-index:900; display:none; align-items:center; justify-content:center;
@@ -287,7 +274,6 @@ header{
 .modal-close:hover{border-color:var(--red);color:var(--red)}
 .modal-body{padding:1.5rem}
 
-/* Form */
 .form-group{margin-bottom:1.1rem}
 .form-label{font-family:var(--mono);font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--text3);display:block;margin-bottom:0.4rem}
 .form-input,.form-textarea,.form-select{
@@ -302,7 +288,6 @@ header{
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
 .form-hint{font-family:var(--mono);font-size:0.6rem;color:var(--text3);margin-top:0.3rem}
 
-/* Feature editor */
 .features-editor{display:flex;flex-direction:column;gap:0.4rem;margin-top:0.4rem}
 .feature-row{display:flex;gap:0.4rem;align-items:center}
 .feature-row input{flex:1;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:var(--mono);font-size:0.75rem;padding:0.3rem 0.6rem;border-radius:4px;outline:none}
@@ -313,7 +298,6 @@ header{
 .add-feat-btn{font-family:var(--mono);font-size:0.68rem;color:var(--green);background:transparent;border:1px dashed rgba(0,255,136,0.3);border-radius:4px;padding:0.3rem 0.7rem;cursor:pointer;transition:all var(--transition);width:100%;margin-top:0.25rem}
 .add-feat-btn:hover{background:rgba(0,255,136,0.06)}
 
-/* Tech input */
 .tech-input-wrap{display:flex;gap:0.4rem}
 .tech-input-wrap input{flex:1}
 #tech-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.4rem}
@@ -326,7 +310,6 @@ header{
 .tech-tag-edit button{background:none;border:none;color:var(--text3);cursor:pointer;font-size:0.8rem;padding:0;line-height:1}
 .tech-tag-edit button:hover{color:var(--red)}
 
-/* Color picker */
 .color-options{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.4rem}
 .color-opt{
   width:28px;height:28px;border-radius:50%;cursor:pointer;
@@ -335,7 +318,6 @@ header{
 }
 .color-opt.selected{border-color:white;transform:scale(1.15)}
 
-/* ── EMPTY STATE ── */
 .empty-state{
   text-align:center; padding:5rem 2rem;
   font-family:var(--mono); color:var(--text3);
@@ -343,7 +325,6 @@ header{
 .empty-state .big{font-size:3rem;margin-bottom:1rem;display:block}
 .empty-state p{font-size:0.8rem;letter-spacing:1px;margin-bottom:1.5rem}
 
-/* ── TOAST ── */
 .toast{
   position:fixed;bottom:1.5rem;right:1.5rem;
   background:var(--surface);border:1px solid var(--border2);
@@ -356,12 +337,10 @@ header{
 }
 .toast.show{transform:translateY(0);opacity:1}
 
-/* ── PROGRESS RING (hero) ── */
 .ring-wrap{position:relative;display:inline-flex;align-items:center;justify-content:center}
 .ring-wrap svg{transform:rotate(-90deg)}
 .ring-text{position:absolute;font-family:var(--display);font-size:1.1rem;font-weight:800;color:var(--green)}
 
-/* ── DETAIL PANEL ── */
 .detail-modal .modal{width:min(760px,95vw)}
 .detail-section{margin-bottom:1.5rem}
 .detail-section-title{font-family:var(--mono);font-size:0.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--text3);margin-bottom:0.75rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border)}
@@ -388,7 +367,6 @@ header{
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="logo">
     <div class="logo-dot"></div>
@@ -396,12 +374,12 @@ header{
   </div>
   <div class="header-right">
     <span style="font-family:var(--mono);font-size:0.65rem;color:var(--text3);letter-spacing:1px" id="project-count-label">0 PROJECTS</span>
+    <button class="btn btn-outline btn-sm" onclick="importData()">⬆ IMPORT</button>
     <button class="btn btn-outline btn-sm" onclick="exportData()">⬇ EXPORT</button>
     <button class="btn btn-green" onclick="openAddModal()">+ ADD PROJECT</button>
   </div>
 </header>
 
-<!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stat-cell" style="--color:var(--green)">
     <div class="stat-label">Total Projects</div>
@@ -430,9 +408,7 @@ header{
   </div>
 </div>
 
-<!-- MAIN -->
 <main class="main">
-  <!-- Toolbar -->
   <div class="toolbar">
     <div class="search-wrap">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -461,11 +437,9 @@ header{
     </div>
   </div>
 
-  <!-- Projects -->
   <div id="projects-container" class="grid-view"></div>
 </main>
 
-<!-- ADD/EDIT MODAL -->
 <div class="modal-backdrop" id="add-modal" onclick="if(event.target===this)closeModal()">
   <div class="modal" onclick="event.stopPropagation()">
     <div class="modal-header">
@@ -533,7 +507,6 @@ header{
   </div>
 </div>
 
-<!-- DETAIL MODAL -->
 <div class="modal-backdrop detail-modal" id="detail-modal" onclick="if(event.target===this)closeDetail()">
   <div class="modal" onclick="event.stopPropagation()">
     <div id="detail-content"></div>
@@ -562,11 +535,31 @@ let currentView = 'grid';
 let tempTech = [];
 let selectedColor = '#00ff88';
 
+// ── ESCAPING HELPERS ────────────────────────────────────────
+function esc(s) {
+  if (s === undefined || s === null) return '';
+  return String(s)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
+}
+function safeUrl(u) {
+  if (!u) return '';
+  const t = String(u).trim();
+  if (!t) return '';
+  return /^https?:\/\//i.test(t) ? t : 'https://' + t;
+}
+function safeHex(c) {
+  return /^#[0-9a-fA-F]{3,8}$/.test(c) ? c : '#00ff88';
+}
+
 // ── STORAGE ─────────────────────────────────────────────────
 function load() {
   try { projects = JSON.parse(localStorage.getItem('pxp_projects') || '[]'); }
   catch { projects = []; }
-  // Seed demo data if empty
+  if (!Array.isArray(projects)) projects = [];
   if (!projects.length) seedDemo();
 }
 function save() {
@@ -706,7 +699,7 @@ function timeAgo(ts) {
 // ── STATS ────────────────────────────────────────────────────
 function updateStats() {
   const total = projects.length;
-  const avg = total ? Math.round(projects.reduce((s,p)=>s+p.progress,0)/total) : 0;
+  const avg = total ? Math.round(projects.reduce((s,p)=>s+(p.progress||0),0)/total) : 0;
   const complete = projects.filter(p=>p.status==='complete').length;
   const active = projects.filter(p=>p.status==='active'||p.status==='building').length;
   const allFeats = projects.flatMap(p=>p.features||[]);
@@ -719,7 +712,6 @@ function updateStats() {
   document.getElementById('s-feats').innerHTML = doneFeats + `<span style="color:var(--text3);font-size:0.7rem">/${allFeats.length}</span>`;
   document.getElementById('project-count-label').textContent = total + ' PROJECT' + (total!==1?'S':'');
 
-  // Fill bars
   document.querySelectorAll('.stat-cell').forEach((el,i) => {
     const fills = [
       Math.min(100, total*5),
@@ -740,15 +732,15 @@ function render() {
 
   let filtered = projects.filter(p => {
     const matchF = currentFilter==='all' || p.status===currentFilter;
-    const matchQ = !q || p.name.toLowerCase().includes(q) || (p.desc||'').toLowerCase().includes(q) || (p.tech||[]).some(t=>t.toLowerCase().includes(q));
+    const matchQ = !q || (p.name||'').toLowerCase().includes(q) || (p.desc||'').toLowerCase().includes(q) || (p.tech||[]).some(t=>(t||'').toLowerCase().includes(q));
     return matchF && matchQ;
   });
 
   filtered.sort((a,b) => {
-    if(sort==='updated')    return b.updated - a.updated;
-    if(sort==='progress-d') return b.progress - a.progress;
-    if(sort==='progress-a') return a.progress - b.progress;
-    if(sort==='name')       return a.name.localeCompare(b.name);
+    if(sort==='updated')    return (b.updated||0) - (a.updated||0);
+    if(sort==='progress-d') return (b.progress||0) - (a.progress||0);
+    if(sort==='progress-a') return (a.progress||0) - (b.progress||0);
+    if(sort==='name')       return (a.name||'').localeCompare(b.name||'');
     if(sort==='features')   return (b.features||[]).length - (a.features||[]).length;
     return 0;
   });
@@ -761,7 +753,6 @@ function render() {
 
   container.innerHTML = filtered.map(buildCard).join('');
 
-  // Animate progress bars
   requestAnimationFrame(() => {
     document.querySelectorAll('.project-card').forEach(card => {
       const pct = card.dataset.progress;
@@ -774,8 +765,7 @@ function render() {
 
 function buildCard(p) {
   const feats = p.features || [];
-  const done  = feats.filter(f=>f.status==='done').length;
-  const wip   = feats.filter(f=>f.status==='wip').length;
+  const color = safeHex(p.color);
   const statusMap = {
     active:   ['s-active','✅ Active'],
     building: ['s-building','🔨 Building'],
@@ -785,46 +775,46 @@ function buildCard(p) {
   };
   const [sc, sl] = statusMap[p.status] || ['s-paused','Unknown'];
 
-  return `<div class="project-card" data-id="${p.id}" data-progress="${p.progress}"
-    style="--card-color:${p.color||'#00ff88'}"
-    onclick="openDetail('${p.id}')">
+  return `<div class="project-card" data-id="${esc(p.id)}" data-progress="${Number(p.progress)||0}"
+    style="--card-color:${color}"
+    onclick="openDetail('${esc(p.id)}')">
     <div class="card-header">
       <div class="card-title-wrap">
-        <div class="card-title">${p.name}</div>
+        <div class="card-title">${esc(p.name)}</div>
       </div>
       <div style="display:flex;gap:0.4rem;align-items:center">
         <span class="status-badge ${sc}">${sl}</span>
         <div class="card-actions" onclick="event.stopPropagation()">
-          <button class="btn btn-outline btn-sm" onclick="openEdit('${p.id}')">✎</button>
-          <button class="btn btn-danger btn-sm" onclick="deleteProject('${p.id}')">✕</button>
+          <button class="btn btn-outline btn-sm" onclick="openEdit('${esc(p.id)}')">✎</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteProject('${esc(p.id)}')">✕</button>
         </div>
       </div>
     </div>
-    <div class="card-desc">${p.desc||'No description.'}</div>
+    <div class="card-desc">${esc(p.desc)||'No description.'}</div>
     <div class="progress-section">
       <div class="progress-header">
         <span class="progress-label">COMPLETION</span>
-        <span class="progress-pct" style="color:${p.color||'#00ff88'}">${p.progress}%</span>
+        <span class="progress-pct" style="color:${color}">${Number(p.progress)||0}%</span>
       </div>
       <div class="progress-track">
-        <div class="progress-bar" style="background:${p.color||'#00ff88'};box-shadow:0 0 8px ${p.color||'#00ff88'};width:0%"></div>
+        <div class="progress-bar" style="background:${color};box-shadow:0 0 8px ${color};width:0%"></div>
       </div>
     </div>
     ${feats.length ? `
     <div class="features-wrap">
       ${feats.slice(0,6).map(f=>`
-        <span class="feature-tag ${f.status}">
-          ${f.status==='done'?'✓':f.status==='wip'?'~':'○'} ${f.name}
+        <span class="feature-tag ${esc(f.status)}">
+          ${f.status==='done'?'✓':f.status==='wip'?'~':'○'} ${esc(f.name)}
         </span>`).join('')}
       ${feats.length>6?`<span class="feature-tag">+${feats.length-6} more</span>`:''}
     </div>` : ''}
     <div class="card-bottom">
       <div class="card-tech">
-        ${(p.tech||[]).map(t=>`<span class="tech-pill">${t}</span>`).join('')}
+        ${(p.tech||[]).map(t=>`<span class="tech-pill">${esc(t)}</span>`).join('')}
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.2rem">
-        <div class="card-date">${timeAgo(p.updated)}</div>
-        ${feats.length?`<div style="font-family:var(--mono);font-size:0.58rem;color:var(--text3)">${done}/${feats.length} feats</div>`:''}
+        <div class="card-date">${timeAgo(p.updated||Date.now())}</div>
+        ${feats.length?`<div style="font-family:var(--mono);font-size:0.58rem;color:var(--text3)">${feats.filter(f=>f.status==='done').length}/${feats.length} feats</div>`:''}
       </div>
     </div>
   </div>`;
@@ -838,34 +828,37 @@ function openDetail(id) {
   const done = feats.filter(f=>f.status==='done').length;
   const wip  = feats.filter(f=>f.status==='wip').length;
   const todo = feats.filter(f=>f.status==='todo').length;
+  const color = safeHex(p.color);
+  const ghUrl = p.github ? safeUrl(p.github) : '';
+  const liveUrl = p.live ? safeUrl(p.live) : '';
 
   document.getElementById('detail-content').innerHTML = `
     <div class="modal-header" style="border-bottom:1px solid var(--border);padding-bottom:1rem">
       <div>
-        <div style="font-family:var(--display);font-size:1.4rem;font-weight:800">${p.name}</div>
-        <div style="font-family:var(--mono);font-size:0.65rem;color:var(--text3);margin-top:0.2rem">${p.tech?.join(' · ')||''}</div>
+        <div style="font-family:var(--display);font-size:1.4rem;font-weight:800">${esc(p.name)}</div>
+        <div style="font-family:var(--mono);font-size:0.65rem;color:var(--text3);margin-top:0.2rem">${esc((p.tech||[]).join(' · '))}</div>
       </div>
       <div style="display:flex;gap:0.5rem;align-items:center">
-        <button class="btn btn-outline btn-sm" onclick="closeDetail();openEdit('${p.id}')">✎ EDIT</button>
+        <button class="btn btn-outline btn-sm" onclick="closeDetail();openEdit('${esc(p.id)}')">✎ EDIT</button>
         <button class="modal-close" onclick="closeDetail()">✕</button>
       </div>
     </div>
     <div class="modal-body">
       <div class="detail-section">
-        <div style="font-size:0.95rem;color:var(--text2);line-height:1.7;margin-bottom:1rem">${p.desc||''}</div>
+        <div style="font-size:0.95rem;color:var(--text2);line-height:1.7;margin-bottom:1rem">${esc(p.desc)||''}</div>
         <div style="display:flex;gap:1rem;flex-wrap:wrap">
-          ${p.github?`<a href="https://${p.github}" target="_blank" class="btn btn-outline btn-sm">⌥ GITHUB</a>`:''}
-          ${p.live?`<a href="https://${p.live}" target="_blank" class="btn btn-green btn-sm">↗ LIVE SITE</a>`:''}
+          ${ghUrl?`<a href="${esc(ghUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">⌥ GITHUB</a>`:''}
+          ${liveUrl?`<a href="${esc(liveUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-sm">↗ LIVE SITE</a>`:''}
         </div>
       </div>
 
       <div class="detail-section">
         <div class="detail-section-title">// PROGRESS</div>
         <div style="display:flex;align-items:center;gap:1.5rem">
-          <div style="font-family:var(--display);font-size:3rem;font-weight:800;color:${p.color||'#00ff88'}">${p.progress}%</div>
+          <div style="font-family:var(--display);font-size:3rem;font-weight:800;color:${color}">${Number(p.progress)||0}%</div>
           <div style="flex:1">
             <div class="progress-track" style="height:8px">
-              <div class="progress-bar" style="width:${p.progress}%;background:${p.color||'#00ff88'};box-shadow:0 0 12px ${p.color||'#00ff88'}"></div>
+              <div class="progress-bar" style="width:${Number(p.progress)||0}%;background:${color};box-shadow:0 0 12px ${color}"></div>
             </div>
             <div style="font-family:var(--mono);font-size:0.65rem;color:var(--text3);margin-top:0.5rem">
               ${done} done · ${wip} in progress · ${todo} todo
@@ -880,14 +873,14 @@ function openDetail(id) {
         <div class="detail-features-grid">
           ${feats.map(f=>`
             <div class="detail-feat">
-              <div class="feat-dot ${f.status}"></div>
-              <span style="color:${f.status==='done'?'var(--text)':f.status==='wip'?'var(--yellow)':'var(--text3)'}">${f.name}</span>
+              <div class="feat-dot ${esc(f.status)}"></div>
+              <span style="color:${f.status==='done'?'var(--text)':f.status==='wip'?'var(--yellow)':'var(--text3)'}">${esc(f.name)}</span>
             </div>`).join('')}
         </div>
       </div>`:''}
 
       <div style="display:flex;justify-content:flex-end;margin-top:1rem">
-        <button class="btn btn-danger btn-sm" onclick="closeDetail();deleteProject('${p.id}')">✕ DELETE PROJECT</button>
+        <button class="btn btn-danger btn-sm" onclick="closeDetail();deleteProject('${esc(p.id)}')">✕ DELETE PROJECT</button>
       </div>
     </div>`;
   document.getElementById('detail-modal').classList.add('open');
@@ -904,13 +897,14 @@ function openAddModal() {
   clearForm();
   renderColorOptions();
   document.getElementById('add-modal').classList.add('open');
+  setTimeout(() => document.getElementById('f-name').focus(), 50);
 }
 function openEdit(id) {
   const p = projects.find(x=>x.id===id);
   if(!p) return;
   editingId = id;
   tempTech = [...(p.tech||[])];
-  selectedColor = p.color||'#00ff88';
+  selectedColor = safeHex(p.color);
   document.getElementById('modal-title-text').textContent = 'Edit Project';
   document.getElementById('save-btn').textContent = 'UPDATE PROJECT';
   document.getElementById('f-name').value = p.name||'';
@@ -944,7 +938,10 @@ function saveProject() {
   document.querySelectorAll('.feature-row').forEach(row => {
     const inp = row.querySelector('input');
     const sel = row.querySelector('select');
-    if(inp?.value.trim()) feats.push({ name: inp.value.trim(), status: sel?.value||'todo' });
+    if(inp?.value.trim()) {
+      const status = ['done','wip','todo'].includes(sel?.value) ? sel.value : 'todo';
+      feats.push({ name: inp.value.trim(), status });
+    }
   });
 
   const data = {
@@ -977,52 +974,86 @@ function deleteProject(id) {
   save(); render(); toast('Project deleted');
 }
 
-// Feature editor
+// Feature editor — uses DOM APIs to avoid quote injection
 function renderFeatureEditor(feats=[]) {
   const ed = document.getElementById('features-editor');
-  ed.innerHTML = feats.map((f,i)=>`
-    <div class="feature-row">
-      <input value="${f.name}" placeholder="Feature name">
-      <select>
-        <option value="todo" ${f.status==='todo'?'selected':''}>○ Todo</option>
-        <option value="wip"  ${f.status==='wip' ?'selected':''}>~ WIP</option>
-        <option value="done" ${f.status==='done'?'selected':''}>✓ Done</option>
-      </select>
-      <button class="rm-btn" onclick="this.closest('.feature-row').remove()">✕</button>
-    </div>`).join('');
+  ed.innerHTML = '';
+  feats.forEach(f => ed.appendChild(buildFeatureRow(f.name, f.status)));
+}
+function buildFeatureRow(name = '', status = 'todo') {
+  const row = document.createElement('div');
+  row.className = 'feature-row';
+
+  const inp = document.createElement('input');
+  inp.placeholder = 'Feature name';
+  inp.value = name;
+
+  const sel = document.createElement('select');
+  ['todo','wip','done'].forEach(v => {
+    const opt = document.createElement('option');
+    opt.value = v;
+    opt.textContent = v === 'todo' ? '○ Todo' : v === 'wip' ? '~ WIP' : '✓ Done';
+    if (v === status) opt.selected = true;
+    sel.appendChild(opt);
+  });
+
+  const rm = document.createElement('button');
+  rm.className = 'rm-btn';
+  rm.type = 'button';
+  rm.textContent = '✕';
+  rm.onclick = () => row.remove();
+
+  row.append(inp, sel, rm);
+  return row;
 }
 function addFeatureRow() {
   const ed = document.getElementById('features-editor');
-  const row = document.createElement('div');
-  row.className = 'feature-row';
-  row.innerHTML = `<input placeholder="Feature name"><select><option value="todo">○ Todo</option><option value="wip">~ WIP</option><option value="done">✓ Done</option></select><button class="rm-btn" onclick="this.closest('.feature-row').remove()">✕</button>`;
+  const row = buildFeatureRow('', 'todo');
   ed.appendChild(row);
   row.querySelector('input').focus();
 }
 
-// Tech tags
+// Tech tags — index-based removal avoids quote injection
 function addTech() {
   const inp = document.getElementById('tech-input');
   const val = inp.value.trim();
   if(val && !tempTech.includes(val)) { tempTech.push(val); renderTechTags(); }
   inp.value = '';
+  inp.focus();
 }
-function removeTech(t) { tempTech = tempTech.filter(x=>x!==t); renderTechTags(); }
+function removeTech(idx) {
+  tempTech.splice(idx, 1);
+  renderTechTags();
+}
 function renderTechTags() {
-  document.getElementById('tech-tags').innerHTML = tempTech.map(t=>
-    `<span class="tech-tag-edit">${t}<button onclick="removeTech('${t}')">✕</button></span>`
-  ).join('');
+  const c = document.getElementById('tech-tags');
+  c.innerHTML = '';
+  tempTech.forEach((t, i) => {
+    const span = document.createElement('span');
+    span.className = 'tech-tag-edit';
+    span.textContent = t;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = '✕';
+    btn.onclick = () => removeTech(i);
+    span.appendChild(btn);
+    c.appendChild(span);
+  });
 }
 
 // Color options
 function renderColorOptions() {
-  document.getElementById('color-options').innerHTML = COLORS.map(c=>
-    `<div class="color-opt ${c.val===selectedColor?'selected':''}"
-      style="background:${c.val};box-shadow:0 0 8px ${c.val}40"
-      onclick="pickColor('${c.val}')"></div>`
-  ).join('');
+  const c = document.getElementById('color-options');
+  c.innerHTML = '';
+  COLORS.forEach(col => {
+    const d = document.createElement('div');
+    d.className = 'color-opt' + (col.val === selectedColor ? ' selected' : '');
+    d.style.background = col.val;
+    d.style.boxShadow = `0 0 8px ${col.val}40`;
+    d.onclick = () => { selectedColor = col.val; renderColorOptions(); };
+    c.appendChild(d);
+  });
 }
-function pickColor(val) { selectedColor=val; renderColorOptions(); }
 
 // ── FILTERS / VIEW ───────────────────────────────────────────
 document.querySelectorAll('.ftab').forEach(btn => {
@@ -1043,20 +1074,51 @@ function setView(v) {
   document.getElementById('vbtn-list').classList.toggle('on', v==='list');
 }
 
-// ── EXPORT ───────────────────────────────────────────────────
+// ── EXPORT / IMPORT ──────────────────────────────────────────
 function exportData() {
   const blob = new Blob([JSON.stringify(projects, null, 2)], {type:'application/json'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = 'projectxp-export.json';
   a.click();
+  URL.revokeObjectURL(a.href);
   toast('📦 Exported projectxp-export.json');
+}
+function importData() {
+  const inp = document.createElement('input');
+  inp.type = 'file';
+  inp.accept = '.json,application/json';
+  inp.onchange = e => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(reader.result);
+        if (!Array.isArray(data)) throw new Error('not an array');
+        if (!confirm(`Replace ${projects.length} projects with ${data.length} from file?`)) return;
+        projects = data;
+        save(); render();
+        toast(`✓ Imported ${data.length} projects`);
+      } catch {
+        toast('⚠ Invalid JSON file');
+      }
+    };
+    reader.readAsText(file);
+  };
+  inp.click();
 }
 
 // ── KEYBOARD ─────────────────────────────────────────────────
 document.addEventListener('keydown', e => {
   if(e.key==='Escape') { closeModal(); closeDetail(); }
-  if(e.key==='n' && !e.target.matches('input,textarea,select')) openAddModal();
+  if(e.key==='n' && !e.target.matches('input,textarea,select')) {
+    if (!document.getElementById('add-modal').classList.contains('open') &&
+        !document.getElementById('detail-modal').classList.contains('open')) {
+      e.preventDefault();
+      openAddModal();
+    }
+  }
 });
 
 // ── INIT ─────────────────────────────────────────────────────
