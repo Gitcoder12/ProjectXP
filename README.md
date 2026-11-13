@@ -48,3 +48,17 @@ See [LICENSE](LICENSE).
 - [Company and team fit](COMPANY_FIT.md) · [README explanation draft](README_ADDENDUM_DRAFT.md)
 - [README quality checklist](README_QUALITY_CHECKLIST.md)
 - [Contributing](CONTRIBUTING.md) · [Agent instructions](AGENTS.md) · [Agent skills](SKILLS.md)
+
+## Understanding the project
+
+### In plain language
+
+A simple browser project tracker where you add projects, record features and see progress in one place.
+
+### Technical and research view
+
+A static single-page HTML/CSS/JavaScript application. Project and feature records are saved in browser localStorage. It supports progress percentages, repository/demo URLs, feature states and bundled examples. Local browser storage is not multi-user sync or a server backup.
+
+Document the state model, localStorage keys, validation rules, progress calculation, import/export format and recovery behavior for malformed storage.
+
+For future work, see [FEATURE_UPGRADE_PLAN.md](FEATURE_UPGRADE_PLAN.md), [ACTIVITY_LOG.md](ACTIVITY_LOG.md), [COMPANY_FIT.md](COMPANY_FIT.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
