@@ -33,3 +33,10 @@ This section supplements the maintainer-authored README above. The original text
 3. Add tests for first run, empty saved state, import/export round trips, malformed imports, and localStorage failures.
 
 **Verification status:** static source inspection only; browser behavior and import/export tests remain unverified.
+
+---
+
+## Examples Used
+- Tracking feature completion across a software project
+- Comparing planned milestones with completed work
+- Reviewing progress across multiple repositories
