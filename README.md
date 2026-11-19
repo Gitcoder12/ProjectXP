@@ -40,3 +40,27 @@ This section supplements the maintainer-authored README above. The original text
 - Tracking feature completion across a software project
 - Comparing planned milestones with completed work
 - Reviewing progress across multiple repositories
+
+
+---
+
+## Comparison with Existing Open-Source Projects
+
+ProjectXP is described as a developer-oriented project progress tracker that summarizes completion, feature status and repository progress. The following tools provide adjacent project-management and engineering-visibility references.
+
+| Project | Established focus | Relationship to ProjectXP |
+|---|---|---|
+| [OpenProject](https://github.com/opf/openproject) | Full project-management platform with work packages, timelines and collaboration | Much broader work-management suite; ProjectXP's intended focus is a compact progress view for software projects and repositories. |
+| [Plane](https://github.com/makeplane/plane) | Open-source issue/project management with cycles, modules and roadmaps | A broader planning and execution workspace; ProjectXP aims to summarize project progress rather than replace issue tracking. |
+| [Hygieia](https://github.com/CapitalOne/Hygieia) | Engineering dashboard aggregating software-delivery pipeline metrics | A closer engineering-visibility reference; ProjectXP's stated distinction is feature/completion-oriented tracking rather than a full DevOps metrics dashboard. |
+
+### Where ProjectXP is different
+- **Repository-centric progress:** the product is framed around project completion and feature status for coding work.
+- **At-a-glance insights:** its intended value is a lightweight view of progress rather than a full issue-management workflow.
+- **Developer portfolio context:** the concept can help developers review multiple personal projects in one place if repository data is kept current and attributable.
+
+### Where established projects are stronger
+OpenProject and Plane provide mature collaboration and planning workflows. Hygieia offers a more established engineering-dashboard concept. ProjectXP should not claim reliable automatic completion measurement unless it can explain how it infers status from issues, commits, tests or explicit user updates.
+
+### Evidence and limitations
+Document whether progress is manually entered or inferred, how stale data is handled, and how imports/exports preserve user data. Completion percentages are only as trustworthy as their underlying task definitions and update process. This is a positioning comparison, not a feature-parity or productivity benchmark.
