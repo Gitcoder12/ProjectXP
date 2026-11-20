@@ -2,6 +2,20 @@
 A smart developer project progress tracker with completion stats, feature status, and visual progress insights for coding repositories.
 Live: https://gitcoder12.github.io/ProjectXP/
 
+## Open the website locally
+
+1. Open the repository folder in VS Code.
+2. In the terminal, run:
+
+```bash
+python -m http.server 8000
+```
+
+3. Open **http://localhost:8000** in your browser.
+4. Keep the terminal running while using the site; press **Ctrl+C** to stop it.
+
+Project data is stored in this browser's local storage. It does not automatically sync across browsers or devices.
+
 
 ---
 
